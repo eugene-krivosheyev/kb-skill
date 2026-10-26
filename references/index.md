@@ -55,7 +55,7 @@ Do not create a separate KB root for each book.
    Keep input files unchanged.
 2. Read existing source records before an update.
 3. Give each new work and edition a separate source ID.
-4. Record the source identity and original location.
+4. Record the source identity and original filename; reference the retained original through a package-relative `sources.resource` path.
 5. Keep its unchanged original in the source package.
 6. Read the source structure before you divide its text.
 7. Read the content in source order, in manageable parts.
@@ -164,7 +164,7 @@ Keep `coverage: partial` if the original is missing or content remains unread or
 ## Report the Result
 
 Report the indexing outcome in the agent chat.
-Include the resolved KB path, source IDs, original paths, coverage, gaps, unresolved term matches, and a summary of created or updated files.
+Include the resolved KB path, source IDs, retained-original resource paths within the source packages, coverage, gaps, unresolved term matches, and a summary of created or updated files.
 Describe the checks you performed. Do not claim automatic validation.
 
 Keep durable source identity, provenance, edition or version, coverage, and gaps in `source.md`.

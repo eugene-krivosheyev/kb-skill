@@ -82,7 +82,8 @@ Each source package must remain useful without the catalog.
 Record the source identity, edition, origin, and language in `source.md`.
 Use `sources` entries with a `resource` to identify original material.
 Point a source entry to the retained original file.
-Record its original filename and local path.
+Record its original filename and reference the retained original with a package-relative `sources.resource` path.
+Do not add a separate field for the external filesystem location of the supplied input.
 Keep original page or section locations when available.
 Do not invent page numbers.
 
