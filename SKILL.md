@@ -7,6 +7,9 @@ description: Index text sources in an Open Knowledge Format base. Find concepts,
 
 Use this skill to prepare source material for later questions.
 Use it to find source evidence for definitions and engineering tasks.
+An indexing request covers the entire specified source unless the user limits it.
+Finish reading, indexing, and checking that scope; show factual progress in chat.
+Follow the completion and progress rules in the index procedure.
 
 ## Commands
 

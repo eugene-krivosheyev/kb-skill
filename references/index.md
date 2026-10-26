@@ -1,5 +1,44 @@
 # Index Procedure
 
+## Completion and Progress
+
+Treat indexing as unfinished until all requested source sections have been read,
+useful evidence cards and catalog entries have been made, and the result has been checked.
+Extracting every file or indexing summaries alone does not complete the request.
+
+Keep working through accessible material after each checkpoint.
+`coverage: partial` records an intermediate state; it is not permission to end early.
+Do not stop merely because the source is long, a first pass is useful, or the current
+context is filling. Save the next exact unread location and continue after compaction.
+Do not ask the user to say “continue” for work already requested.
+
+Before starting, tell the user the source scope, existing coverage, and next stage.
+During work, report completed chapters or sections, what changed in the index,
+and what comes next. Send concise updates at meaningful milestones and at least
+once per minute while work continues. Use verified counts and a stated denominator;
+do not invent percentages or remaining-time estimates. Distinguish text retained,
+text actually read, figures reviewed, cards created, and checks completed.
+
+For long sources, use parallel reader agents when delegation is available.
+Assign nonoverlapping, contiguous chapter ranges and explicit file ownership.
+Each reader must read its full assigned text in source order, including notes,
+examples, tables, and relevant figures; report exact coverage and any gaps.
+The coordinator owns shared indexes and the coverage record, reconciles reader
+results in source order, and checks that no section was skipped or counted twice.
+Delegation does not relax the tool restrictions or evidence requirements.
+
+Keep outputs small enough to read without truncation. A truncated or omitted
+passage remains unread until the missing portion has been retrieved and read.
+Read diagrams and graphical equations with available image tools, in context;
+copying their image files does not count as reading them.
+
+Stop before completion only when the user pauses or narrows the task, or a concrete
+access, permission, input, or tool limitation prevents further useful work.
+Try available alternatives and finish unaffected sections first. Explain the exact
+remaining blocker, preserve the checkpoint, and label the outcome incomplete.
+Do not present a checkpoint as a final success. Mark `coverage: complete` only
+when the coverage list has no unread or unavailable source content and the checks pass.
+
 ## Open the KB
 
 Resolve the KB path with the location rules in `SKILL.md`.
@@ -21,6 +60,10 @@ Do not create a separate KB root for each book.
 6. Read the source structure before you divide its text.
 7. Read the content in source order, in manageable parts.
 8. Update the coverage list after each part.
+
+Read the main narrative, code, equations, tables, captions, notes, and bibliographies.
+Use summaries to navigate or consolidate, never as a replacement for the main text.
+Card selection is based on usefulness, not a fixed quota per chapter.
 
 If the original is already retained, use that file without another copy.
 Reuse a stored original only after you confirm that its content matches.
