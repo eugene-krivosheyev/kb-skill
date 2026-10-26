@@ -84,6 +84,10 @@ Use `sources` entries with a `resource` to identify original material.
 Point a source entry to the retained original file.
 Record its original filename and reference the retained original with a package-relative `sources.resource` path.
 Do not add a separate field for the external filesystem location of the supplied input.
+Keep `source.md` portable in both frontmatter and prose: local file paths and links must be relative and resolve within the selected KB, preferably within the source package.
+Do not persist absolute host paths, home-relative paths, `file://` links, or relative paths escaping the KB to input files, temporary directories, workspaces, skill installations, or the KB root.
+Describe external input provenance by filename, input form, edition, and retained-file identity; omit its machine-specific location. Original archive-member paths may remain as relative source locators, not host filesystem links.
+Keep operational host paths in chat or session context when needed to execute the command or report the KB location, never in `source.md`.
 Keep original page or section locations when available.
 Do not invent page numbers.
 

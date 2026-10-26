@@ -56,6 +56,7 @@ Do not create a separate KB root for each book.
 2. Read existing source records before an update.
 3. Give each new work and edition a separate source ID.
 4. Record the source identity and original filename; reference the retained original through a package-relative `sources.resource` path.
+   Keep host-specific locations out of both `source.md` metadata and narrative provenance; preserve origin by filename and input form.
 5. Keep its unchanged original in the source package.
 6. Read the source structure before you divide its text.
 7. Read the content in source order, in manageable parts.
@@ -149,6 +150,7 @@ Keep enough detail to choose a branch without opening every file.
 - Check local links without relying on the catalog.
 - Check evidence anchors and original locations.
 - Check required OKF frontmatter and index structure.
+- Check `source.md` metadata and prose for host-specific filesystem paths; all local file links must be relative and stay inside the KB. Preserve relative archive-member locations used as source locators.
 - Check concept discovery with a different term.
 - Check task discovery without a solution name.
 - Check an aspect discussed far from the main explanation.
@@ -168,6 +170,7 @@ Include the resolved KB path, source IDs, retained-original resource paths withi
 Describe the checks you performed. Do not claim automatic validation.
 
 Keep durable source identity, provenance, edition or version, coverage, and gaps in `source.md`.
+Use portable relative references there; describe external input or skill provenance without recording its filesystem location.
 Keep execution logs, file counts, and check summaries in the chat, not in `source.md`.
 Do not create `report.md` or another indexing report in the KB, or link one from KB indexes, by default.
 Create a separate report file only when the user explicitly requests it.
