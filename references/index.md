@@ -1,5 +1,15 @@
 # Index Procedure
 
+## Open the KB
+
+Resolve the KB path with the location rules in `SKILL.md`.
+Open that KB, or create it if it does not exist.
+Read existing shared indexes before adding sources.
+Create missing shared indexes.
+Add every source under this root's `sources/` directory.
+Keep existing sources and catalog entries.
+Do not create a separate KB root for each book.
+
 ## Read the Source
 
 1. Check the available sources and the target base.
@@ -7,9 +17,15 @@
 2. Read existing source records before an update.
 3. Give each new work and edition a separate source ID.
 4. Record the source identity and original location.
-5. Read the source structure before you divide its text.
-6. Read the content in source order, in manageable parts.
-7. Update the coverage list after each part.
+5. Keep its unchanged original in the source package.
+6. Read the source structure before you divide its text.
+7. Read the content in source order, in manageable parts.
+8. Update the coverage list after each part.
+
+If the original is already retained, use that file without another copy.
+Reuse a stored original only after you confirm that its content matches.
+Do not match originals by filename or title alone.
+If the original cannot be retained, record this gap.
 
 If the content cannot be read with available tools, record the gap.
 Do not mark unread content as complete.
@@ -56,11 +72,16 @@ Keep translations and interpretations separate from the author's wording.
 
 ## Connect the Base
 
-1. Update local indexes in source order where order matters.
-2. Connect local cards to the catalog by meaning.
-3. Keep uncertain term matches separate.
-4. Record source-specific differences beside catalog links.
-5. Update affected catalog entries when a source changes.
+1. Register each source in `<KB>/sources/index.md`, including partial imports.
+2. Update local indexes in source order where order matters.
+3. Connect local cards to the shared catalog by meaning.
+4. Keep uncertain term matches separate.
+5. Record source-specific differences beside catalog links.
+6. Update affected catalog entries when a source changes.
+7. Link the shared source list and catalog from `<KB>/index.md`.
+
+Keep existing entries when updating shared indexes.
+Before a partial import stops, save its source entry and coverage record.
 
 Use short descriptions that show useful details, limits, and exceptions.
 Divide an index when its entries become difficult to select.
@@ -69,6 +90,8 @@ Keep enough detail to choose a branch without opening every file.
 ## Check the Result
 
 - Check every source section against the coverage list.
+- Check that the original is retained without duplicate archive copies.
+- Check that every imported source is reachable from the shared root index.
 - Check local links without relying on the catalog.
 - Check evidence anchors and original locations.
 - Check required OKF frontmatter and index structure.
@@ -77,6 +100,6 @@ Keep enough detail to choose a branch without opening every file.
 - Check an aspect discussed far from the main explanation.
 - Check a definition with its limits and necessary context.
 
-Keep `coverage: partial` if any content remains unread or unavailable.
-Report the source IDs, stored location, coverage, gaps, and unresolved term matches.
+Keep `coverage: partial` if the original is missing or content remains unread or unavailable.
+Report the resolved KB path, source IDs, original paths, coverage, gaps, and unresolved term matches.
 Describe the checks you performed. Do not claim automatic validation.

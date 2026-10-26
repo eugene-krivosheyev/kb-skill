@@ -1,5 +1,12 @@
 # Search Procedure
 
+Resolve the KB path with the location rules in `SKILL.md`.
+If the selected KB does not exist:
+
+- Report its resolved path.
+- Stop the search.
+
+Do not create a KB during search or use the skill directory as a fallback.
 Keep the base unchanged during search.
 Use all indexed sources unless the user limits the scope.
 A normal search need not read every source.

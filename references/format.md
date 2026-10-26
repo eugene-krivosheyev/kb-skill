@@ -33,6 +33,8 @@ Do not force each concept into a solution form.
     <source-id>/
       index.md
       source.md
+      original/
+        <original-file>
       text/
         index.md
         <part>.md
@@ -46,6 +48,8 @@ Do not force each concept into a solution form.
       <entry-id>.md
 ```
 
+`<KB>` is the external root selected by the command, or `~/kb` by default.
+Keep one shared root index, source list, and catalog for that KB.
 Use `concepts`, `tasks`, `solutions`, or `aspects` for `<view>`.
 Create directories only when they contain useful entries.
 Keep all source material and local links within its source directory.
@@ -72,6 +76,8 @@ Each source package must remain useful without the catalog.
 
 Record the source identity, edition, origin, and language in `source.md`.
 Use `sources` entries with a `resource` to identify original material.
+Point a source entry to the retained original file.
+Record its original filename and local path.
 Keep original page or section locations when available.
 Do not invent page numbers.
 
@@ -83,6 +89,17 @@ Use the profile field `coverage: partial` or `coverage: complete`.
 Use `complete` only after you check every source section.
 Keep OKF `status` separate from import coverage.
 Do not add a verification event for a simple index check.
+
+## Original Files
+
+Keep one unchanged original file per source package in `original/`.
+Keep an EPUB file as `.epub`, without an additional `.zip` copy.
+Readable text in `text/` is a separate representation, not another archive.
+For a Markdown original, append `.original` to its filename.
+Keep its bytes unchanged. This suffix prevents its use as an OKF concept file.
+Keep only required extracted assets, such as referenced figures, within the source package.
+Remove temporary archive copies and extraction files made by the current import after their use.
+Do not remove pre-existing user files as duplicates.
 
 ## Source Text
 

@@ -10,12 +10,25 @@ Use it to find source evidence for definitions and engineering tasks.
 
 ## Commands
 
-- `kb index <sources>`: Create or update a knowledge base from the specified sources.
-- `kb search <question>`: Find evidence in the knowledge base.
+- `kb index <sources> [--kb <path>]`: Add sources to the selected knowledge base.
+- `kb search <question> [--kb <path>]`: Find evidence in the selected knowledge base.
 
 These are text commands, not executable programs.
 Accept the same requests in natural language.
-Knowledge base (KB) location by default is `kb` folder in skill root.
+
+## KB Location
+
+Use the explicit `--kb` path or a base location specified in natural language.
+If no path is specified, use `~/kb`.
+Resolve `~` to the user's home directory.
+Resolve relative paths from the working directory, not the skill directory.
+If a required directory cannot be identified, ask for an absolute KB path.
+Keep the KB outside the skill directory.
+If the KB path is inside the skill directory, ask for another path.
+Use one KB root for all sources in a command.
+Use that root for all KB file operations and shared indexes.
+
+## Procedures
 
 For both commands, read [the data format](references/format.md).
 For `index`, read [the index procedure](references/index.md).
