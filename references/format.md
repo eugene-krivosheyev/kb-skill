@@ -16,6 +16,7 @@ Use these local rules without a network request during normal work.
 | Task | A problem or desired result. |
 | Solution | A method that addresses a task under specified conditions. |
 | Aspect | A concern that applies across subjects, such as performance, safety, reliability, or cost. |
+| Domain | An indexer's subject-area classification used to navigate and prioritize relevant material. |
 | Card | A short record that describes an object and links to evidence. |
 | Catalog | Entries that connect cards across sources. |
 
@@ -28,6 +29,9 @@ Do not force each concept into a solution form.
 ```text
 <KB>/
   index.md
+  domains/
+    index.md
+    <domain-id>.md
   sources/
     index.md
     <source-id>/
@@ -51,6 +55,7 @@ Do not force each concept into a solution form.
 `<KB>` is the external root selected by the command, or `~/kb` by default.
 Keep one shared root index, source list, and catalog for that KB.
 Use `concepts`, `tasks`, `solutions`, or `aspects` for `<view>`.
+Keep the domain vocabulary in `domains/`. Define canonical tag meanings in catalog Aspect records with a `tag` field.
 Create directories only when they contain useful entries.
 Keep all source material and local links within its source directory.
 Store catalog entries outside source directories.
@@ -115,8 +120,10 @@ Keep index descriptions separate from source text.
 
 Use one card per useful concept, task, solution, or aspect.
 Add a stable `id` to each card.
-Use `aliases`, `questions`, and `tags` when they help discovery.
-These fields and `coverage` are KB extensions.
+Use `aliases` for alternative names and `questions` for answerable user formulations.
+Give indexed sources and local cards explicit `domains`, `tags`, and `aspect_relations`.
+These fields, the catalog Aspect `tag` field, and `coverage` are KB extensions.
+Follow [the facet model](facets.md) for their semantics, evidence, and empty values.
 
 For each evidence link, state its role and original source location.
 Useful roles include definition, problem, method, example, condition, limit, and consequence.
@@ -137,6 +144,8 @@ Distinguish equal meanings, related meanings, broader meanings, and alternatives
 ## Catalog
 
 Link each catalog entry to the applicable local cards.
+Derive its `domains` and `tags` from those cards; keep evidence-bearing aspect relations local.
+Do not copy local relative paths verbatim into a catalog record.
 Keep source-specific meanings and conditions visible.
 Keep edition differences and disagreements explicit.
 Do not replace local evidence with a combined summary.

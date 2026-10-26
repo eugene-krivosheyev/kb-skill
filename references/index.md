@@ -107,11 +107,20 @@ Keep the author’s narrative and reading order.
 5. Add questions that the linked passages can answer.
 6. Link necessary definitions, conditions, examples, limits, and consequences.
 7. Record aspect effects where the source discusses them.
+8. Assign subject domains and derive cross-cutting tags using the facet model.
+   Read mechanisms and consequences even when the aspect's name is absent.
+   For each tag add its local Aspect relation, conditional statement, and exact source evidence.
+   Reject tags supported only by keyword occurrence or presumed general applicability.
 
 Describe tasks without the solution name.
 Keep the author's solution type as an optional detail.
 Do not invent missing benefits, steps, assumptions, or relations.
 Keep translations and interpretations separate from the author's wording.
+
+Review every card for facet classification, including cards with no justified tags.
+Use empty lists deliberately; do not invent tags to make every record look populated.
+For a metadata-only migration, reuse verified retained originals and text, inspect cards and relevant evidence, and preserve established text coverage.
+Parallel readers may own nonoverlapping card ranges during such a migration; the coordinator owns shared vocabularies, source summaries, and catalog projections.
 
 ## Connect the Base
 
@@ -122,6 +131,8 @@ Keep translations and interpretations separate from the author's wording.
 5. Record source-specific differences beside catalog links.
 6. Update affected catalog entries when a source changes.
 7. Link the shared source list and catalog from `<KB>/index.md`.
+8. Update source facet summaries, domain vocabulary, and canonical Aspect/tag entries.
+9. Project local domains and tags into the catalog and rebuild affected navigation.
 
 Keep existing entries when updating shared indexes.
 Before a partial import stops, save its source entry and coverage record.
@@ -142,6 +153,11 @@ Keep enough detail to choose a branch without opening every file.
 - Check task discovery without a solution name.
 - Check an aspect discussed far from the main explanation.
 - Check a definition with its limits and necessary context.
+- Check domain and tag IDs against the shared vocabularies.
+- Check that each tag has a local Aspect target and exact source evidence; compare tag sets with relation tag sets.
+- Check substantive classification on passages that omit the tag words, and reject passing keyword mentions.
+- Check discovery from symptoms without domain/aspect labels, unclassified-card fallback, and a cross-domain application.
+- Check that catalog facets agree with their linked cards and that original text and stable IDs survived metadata migration.
 
 Keep `coverage: partial` if the original is missing or content remains unread or unavailable.
 

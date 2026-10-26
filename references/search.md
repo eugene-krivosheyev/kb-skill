@@ -14,10 +14,12 @@ Do not restrict the search to the first matching source.
 
 ## Select the Evidence
 
-1. Identify the question type, required facts, conditions, and requested aspects.
-2. Read the base index and applicable catalog indexes.
-3. Find candidate cards through descriptions, terms, aliases, and questions.
-4. Search available text for exact names, identifiers, and alternative terms.
+1. Interpret the user's task, symptoms, constraints, question type, and required facts.
+   Form hypotheses about relevant domains and cross-cutting aspects from meaning, even if their names never occur in the request.
+2. Read the base index, relevant domain definitions, canonical Aspect/tag meanings, and applicable catalog indexes.
+3. Find candidate cards through their mechanisms, effects, descriptions, questions, aliases, domains, and tags.
+   Translate symptoms into several plausible mechanisms; exact-word matches are only candidate generators.
+4. Search available text for those mechanisms, consequences, exact names, identifiers, and alternative formulations.
 5. Read applicable local cards from suitable sources.
 6. Read the linked source passages before using their claims.
 7. Expand the evidence through necessary context and relations.
@@ -26,6 +28,10 @@ If text search is unavailable, inspect directory indexes and candidate files.
 If a catalog entry is absent or unclear, inspect local indexes and source text.
 Keep several possible branches for complex questions.
 Return to another branch when evidence does not answer the question.
+Follow the facet search contract: prioritize matching facets, retain adjacent-domain
+and unclassified branches, and use hard domain/tag filters only for explicit user scope.
+Do not require all requested aspects to be tagged on the same card.
+Read each aspect relation's statement, conditions, inference status, and source evidence before treating a tag as applicable.
 
 | Question | Evidence to seek |
 | --- | --- |
@@ -45,6 +51,9 @@ Do not add every aspect to a simple definition.
 - Check nearby qualifications and exceptions.
 - Read consequences that apply to the requested aspects.
 - Compare descriptions in other sources when they can change the answer.
+- Confirm inferred aspects from causal mechanisms and consequences, not repeated labels.
+- Check whether a named aspect is only incidental or bibliographic; do not treat it as substantive evidence.
+- Reopen the outside-facet branch even when the first branch produced plausible results; an initially inferred domain may hide a better explanation or prerequisite.
 - Keep each claim attached to its source and edition.
 - Distinguish source disagreement from different assumptions or scope.
 
@@ -68,6 +77,7 @@ Include these items when applicable:
 3. Necessary definitions, conditions, and qualifications.
 4. Applicable aspect effects and alternative solutions.
 5. Disagreements, missing evidence, and limits of search coverage.
+6. Relevant aspect effects with their conditions and any indexer inference or cross-domain application made explicit.
 
 Use short exact excerpts when practical.
 Keep equations, units, negation, and conditions.

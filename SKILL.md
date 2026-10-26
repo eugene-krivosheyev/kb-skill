@@ -7,14 +7,16 @@ description: Index text sources in an Open Knowledge Format base. Find concepts,
 
 Use this skill to prepare source material for later questions.
 Use it to find source evidence for definitions and engineering tasks.
+Use `domains` for subject areas and `tags` for content-grounded cross-cutting aspects.
+Interpret mechanisms, effects, conditions, and user intent; keyword overlap is only a retrieval aid.
 An indexing request covers the entire specified source unless the user limits it.
 Finish reading, indexing, and checking that scope; show factual progress in chat.
 Follow the completion and progress rules in the index procedure.
 
 ## Commands
 
-- `kb index <sources> [--kb <path>]`: Add sources to the selected knowledge base.
-- `kb search <question> [--kb <path>]`: Find evidence in the selected knowledge base.
+- `kb index <sources> [--kb <path>]`: Read and index sources with evidence-grounded domains and aspect tags.
+- `kb search <question> [--kb <path>]`: Interpret intent and select conditional source evidence through meaning, facets, and relations.
 
 These are text commands, not executable programs.
 Accept the same requests in natural language.
@@ -34,6 +36,7 @@ Use that root for all KB file operations and shared indexes.
 ## Procedures
 
 For both commands, read [the data format](references/format.md).
+For both commands, read [domains, tags, and semantic selection](references/facets.md).
 For `index`, read [the index procedure](references/index.md).
 For `search`, read [the search procedure](references/search.md).
 Read only the procedure for the selected command.
