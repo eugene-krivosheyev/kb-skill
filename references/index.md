@@ -101,5 +101,15 @@ Keep enough detail to choose a branch without opening every file.
 - Check a definition with its limits and necessary context.
 
 Keep `coverage: partial` if the original is missing or content remains unread or unavailable.
-Report the resolved KB path, source IDs, original paths, coverage, gaps, and unresolved term matches.
+
+## Report the Result
+
+Report the indexing outcome in the agent chat.
+Include the resolved KB path, source IDs, original paths, coverage, gaps, unresolved term matches, and a summary of created or updated files.
 Describe the checks you performed. Do not claim automatic validation.
+
+Keep durable source identity, provenance, edition or version, coverage, and gaps in `source.md`.
+Keep execution logs, file counts, and check summaries in the chat, not in `source.md`.
+Do not create `report.md` or another indexing report in the KB, or link one from KB indexes, by default.
+Create a separate report file only when the user explicitly requests it.
+Unless the user specifies its location, save that report outside the KB.
