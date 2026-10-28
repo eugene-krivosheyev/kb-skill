@@ -123,6 +123,23 @@ Use empty lists deliberately; do not invent tags to make every record look popul
 For a metadata-only migration, reuse verified retained originals and text, inspect cards and relevant evidence, and preserve established text coverage.
 Parallel readers may own nonoverlapping card ranges during such a migration; the coordinator owns shared vocabularies, source summaries, and catalog projections.
 
+## Reconcile Shared Meanings
+
+Apply [semantic deduplication](deduplication.md) after reading each complete local
+claim and its conditions, before publishing new shared entries. Search existing
+meaning registries, aliases and local evidence; headings and tags are candidate aids.
+Split partial overlaps into shared claims and distinct contributions. Route exact
+repetitions to confirmations of the precise claim, and store unique contributions
+in `extensions/`; keep unrelated or uncertain meanings separate.
+
+Process sources in their actual first-indexed Git order when building or explicitly
+reindexing the semantic layer. Reuse verified retained text and local cards; inspect
+the relevant original passages for equivalence and differences. Preserve originals,
+local card IDs, anchors, source coverage and existing routes. Record what has been
+reconciled and the next exact source/claim outside the KB in a working checkpoint.
+Do not claim a migration is finished while any requested source or claim remains
+unclassified. A skill update alone does not migrate an existing KB.
+
 ## Connect the Base
 
 1. Register each source in `<KB>/sources/index.md`, including partial imports.
@@ -133,7 +150,10 @@ Parallel readers may own nonoverlapping card ranges during such a migration; the
 6. Update affected catalog entries when a source changes.
 7. Link the shared source list and catalog from `<KB>/index.md`.
 8. Update source facet summaries, domain vocabulary, and canonical Aspect/tag entries.
-9. Project local domains and tags into the catalog and rebuild affected navigation.
+9. Preserve source projections and rebuild affected navigation.
+10. Update semantic `core.md`, distinct `extensions/`, claim-specific confirmations
+    and the compact `by-meaning/index.md` routes; expose extension applicability
+    and mandatory dependencies before full-record reads.
 
 Keep existing entries when updating shared indexes.
 Before a partial import stops, save its source entry and coverage record.
@@ -151,6 +171,17 @@ Keep enough detail to choose a branch without opening every file.
 - Check evidence anchors and original locations.
 - Check required OKF frontmatter and index structure.
 - Check `source.md` metadata and prose for host-specific filesystem paths; all local file links must be relative and stay inside the KB. Preserve relative archive-member locations used as source locators.
+- Check semantic reconciliation: every reviewed claim has a shared core/extension,
+  an exact confirmation target, or a documented distinct/uncertain route.
+- Check claim support against source, edition, mechanism, preconditions, negation,
+  units, failure model and inference status; partial overlap is not full confirmation.
+- Check core and extension IDs, exact support anchors, extension targets, required
+  dependencies and absence of cycles. A required limitation must remain visible
+  before a search selects the claim.
+- Test repeated meanings with different words, same-name different mechanisms,
+  contradictory claims, partial overlaps, scope-restricted sources, and extension-only
+  facet matches. Verify actual selected reads avoid equivalent accounts while
+  preserving all answer-changing conditions. See [behavioral checks](deduplication.md#behavioral-checks).
 - Check concept discovery with a different term.
 - Check task discovery without a solution name.
 - Check an aspect discussed far from the main explanation.

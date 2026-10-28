@@ -16,16 +16,33 @@ Do not restrict the search to the first matching source.
 
 1. Interpret the user's task, symptoms, constraints, question type, and required facts.
    Form hypotheses about relevant domains and cross-cutting aspects from meaning, even if their names never occur in the request.
-2. Read the base index, relevant domain definitions, canonical Aspect/tag meanings, and applicable catalog indexes.
-3. Find candidate cards through their mechanisms, effects, descriptions, questions, aliases, domains, and tags.
-   Translate symptoms into several plausible mechanisms; exact-word matches are only candidate generators.
-4. Search available text for those mechanisms, consequences, exact names, identifiers, and alternative formulations.
-5. Read applicable local cards from suitable sources.
-6. Read the linked source passages before using their claims.
-7. Expand the evidence through necessary context and relations.
+2. Read the base index and compact `by-meaning/index.md` routes for relevant types;
+   consult domain and canonical Aspect definitions when they disambiguate the task.
+3. Find candidate meanings and extension triggers through mechanisms, effects,
+   questions, aliases and facets. Search bounded descriptions/snippets before
+   opening full records; exact-word matches only generate candidates.
+4. Read the selected group's compact `index.md`. Select applicable extensions,
+   including required dependencies and contradictions, before reading local accounts.
+5. Read one selected `core.md` explanation plus the necessary unique extensions.
+   Follow every applicable `required_extensions` dependency (`path`/`when`);
+   legacy plain links are unconditional. Unknown applicability is a reason to inspect or
+   state a conditional result, not silently omit a material restriction.
+6. Verify the selected claims in suitable source-local cards and original passages.
+   Locate the exact evidence anchor and read its bounded logical passage first;
+   expand for necessary premises rather than dumping a multi-topic text file or
+   an entire chapter by default. Log unavoidable extra reads honestly in evaluations.
+   Use a sufficient representative witness per equivalent claim by default;
+   additional sources are necessary for disagreement, requested comparisons,
+   weak/missing evidence, or other material differences.
+7. Expand only the context needed for the question. Follow
+   [semantic deduplication](deduplication.md#search-before-reading-repetitions):
+   do not open every equivalent source or `confirmations.md` by default.
 
 If text search is unavailable, inspect directory indexes and candidate files.
-If a catalog entry is absent or unclear, inspect local indexes and source text.
+If semantic groups are absent, partial or unclear, use bounded legacy catalog/local
+search and source text. Apply claim-level deduplication to the candidates you can
+verify; do not assume unreviewed entries are duplicates or silently omit unmigrated
+sources. Search remains read-only, including during a partially migrated KB.
 Keep several possible branches for complex questions.
 Return to another branch when evidence does not answer the question.
 Follow the facet search contract: prioritize matching facets, retain adjacent-domain
@@ -54,7 +71,9 @@ Do not add every aspect to a simple definition.
 - Confirm inferred aspects from causal mechanisms and consequences, not repeated labels.
 - Check whether a named aspect is only incidental or bibliographic; do not treat it as substantive evidence.
 - Reopen the outside-facet branch even when the first branch produced plausible results; an initially inferred domain may hide a better explanation or prerequisite.
-- Keep each claim attached to its source and edition.
+- Keep each claim attached to its source and edition. Respect explicit source scope
+  when selecting witnesses; an out-of-scope baseline is navigation, not admissible
+  support. An in-scope extension does not imply its source confirms the whole core.
 - Distinguish source disagreement from different assumptions or scope.
 
 For each part of the question, identify the supporting passages or the remaining gap.
@@ -82,8 +101,11 @@ Include these items when applicable:
 Use short exact excerpts when practical.
 Keep equations, units, negation, and conditions.
 Label paraphrases and any new deductions.
-Remove duplicate evidence.
-Keep differences between source descriptions.
+Remove duplicate claims from the returned context while keeping their provenance
+available. Compare and suppress equivalent candidates before full reads wherever
+verified routing permits; shortening the final answer cannot recover context already
+spent reading duplicates. Keep differences between source descriptions and all
+necessary conditions, even when they increase the context.
 Keep navigation summaries out of the evidence set.
 
 If the user requests an answer, give it with source citations.

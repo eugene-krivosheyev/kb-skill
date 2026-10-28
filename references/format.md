@@ -49,7 +49,15 @@ Do not force each concept into a solution form.
     index.md
     <view>/
       index.md
-      <entry-id>.md
+      <entry-id>.md          Existing source projection or canonical tag definition
+      by-meaning/
+        index.md             Default cross-source semantic navigation
+      <meaning-id>/
+        index.md             Compact selection links and extension triggers
+        core.md              Shared explanation with necessary conditions
+        extensions/
+          <extension-id>.md   One distinct qualification or contribution
+        confirmations.md     Equivalent supporting accounts, loaded on demand
 ```
 
 `<KB>` is the external root selected by the command, or `~/kb` by default.
@@ -146,10 +154,28 @@ Keep narrower aspects when useful, such as latency and throughput within perform
 Keep distinct meanings separate, even when their names match.
 Distinguish equal meanings, related meanings, broader meanings, and alternatives.
 
+## Semantic Records
+
+Semantic groups use the layout above; create `extensions/` and
+`confirmations.md` only when they have content. Their schema, claim-level
+support, chronology and routing are defined in [semantic deduplication](deduplication.md).
+Keep source-local cards complete and independently useful. A group is a derived
+navigation and retrieval layer, never a replacement for an author's evidence.
+
+Existing flat source projections and canonical `tag` records keep their stable IDs
+and links. A single-source projection retains its local card's type, title,
+description, domains and tags. It can link to a semantic group as an additional
+route; it does not become a delta-only replacement. Prefer `by-meaning/index.md`
+for cross-source search; keep source views for explicit source selection and fallback.
+Preserve existing navigation during incremental migration. A canonical tag
+definition remains the vocabulary node; an Aspect group may link to it without
+duplicating or changing its meaning.
+
 ## Catalog
 
 Link each catalog entry to the applicable local cards.
-Derive its `domains` and `tags` from those cards; keep evidence-bearing aspect relations local.
+Derive projection `domains` and `tags` from the linked cards; keep evidence-bearing aspect relations local.
+For semantic cores and extensions, project only facets supported for the specific claims selected there; a whole-card union must not label an unrelated claim.
 Do not copy local relative paths verbatim into a catalog record.
 Keep source-specific meanings and conditions visible.
 Keep edition differences and disagreements explicit.

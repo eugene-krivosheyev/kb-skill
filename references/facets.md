@@ -78,7 +78,10 @@ A source's `domains` summarize its principal areas and are not an exhaustive bou
 A source's `tags` summarize supported aspects found in its cards, not properties of every passage.
 For source-level aspect relations use local paths such as `cards/a01.md` and `text/chapter.md#u-id`, with a representative grounded statement for each tag.
 
-Catalog `domains` and `tags` are the union of the linked local cards' values.
+Flat catalog projections use the union of their linked local cards' values.
+Semantic cores and extensions use only the grounded facets of their selected claims,
+following [semantic deduplication](deduplication.md). A group's navigation can expose
+facets of its members without implying that every property applies to its core.
 Catalog entries link back to those cards for aspect relations and evidence; do not maintain an independent interpretation there.
 Canonical Aspect entries additionally define the shared tag; their links show the source meanings behind it.
 Use a canonical Aspect's singular `tag` field to identify the vocabulary entry. Its aggregate `tags` describe the linked cards and must not be mistaken for a claim that all those properties belong to the canonical definition itself.
@@ -94,6 +97,9 @@ For example, "some clients wait seconds although the average is fine" suggests t
 Translate each hypothesis into mechanisms, consequences, task descriptions, aliases,
 and alternative formulations. Search those and inspect candidate cards and enclosing passages.
 Tags are fast routes to evidence, not proof of applicability; their absence is not proof of irrelevance.
+Group matches by claim meaning and conditions before opening full local cards.
+Different facets neither prove different meanings nor prove equivalence.
+An extension can supply a relevant facet absent from its core; keep that route visible.
 
 By default prioritize matching facets while retaining a search branch outside them,
 including unclassified cards and adjacent subject areas. Apply hard facet restrictions only for the user's explicit scope.
