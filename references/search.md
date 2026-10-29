@@ -34,6 +34,11 @@ Do not restrict the search to the first matching source.
    Use a sufficient representative witness per equivalent claim by default;
    additional sources are necessary for disagreement, requested comparisons,
    weak/missing evidence, or other material differences.
+   For anchor location, return only the requested identifier and line number,
+   for example `rg -n -F -o 'id="wanted"' file`, then read its logical passage.
+   Match-all anchor patterns or whole matching HTML lines can return unrelated
+   source prose. Size grouped responses for their combined output limit; use
+   separate bounded calls when the selected passages together could overflow.
 7. Expand only the context needed for the question. Follow
    [semantic deduplication](deduplication.md#search-before-reading-repetitions):
    do not open every equivalent source or `confirmations.md` by default.

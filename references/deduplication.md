@@ -104,6 +104,10 @@ Paths are relative to the containing file; an extension is one level deeper.
 The source ID must agree with the linked package. `inference` retains the
 original inference status; a shared interpretation never becomes an author claim.
 A support entry covers only its claim under its stated conditions.
+When an explanation combines an author's statement and an indexer's deduction,
+give them separate claim anchors and support flags. Keep necessary inferred
+applicability guards beside the selected explanation; separating attribution must
+not hide a material condition or make it optional.
 Confirmations use the same fields, but `claim` targets `core.md#...` or
 `extensions/<id>.md#...`. Match on that claim and its conditions, not the whole
 target record. Mere citation, copied wording, or another edition of the same work
